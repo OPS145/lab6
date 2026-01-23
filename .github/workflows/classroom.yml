@@ -1,0 +1,287 @@
+name: Autograding Tests
+on:
+  - push
+  - workflow_dispatch
+  - repository_dispatch
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: user-variables_test
+      id: user-variables_test
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: user-variables_test
+        setup-command: sudo -H pip3 install pytest
+        command: pytest user-variables_test.py
+        timeout: 10
+        max-score: 1
+    - name: Autograding Reporter
+      uses: classroom-resources/autograding-grading-reporter@v1
+      env:
+        USER-VARIABLES_TEST_RESULTS: "${{steps.user-variables_test.outputs.result}}"
+      with:
+        runners: user-variables_test
+
+name: Autograding Tests
+on:
+  - push
+  - workflow_dispatch
+  - repository_dispatch
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: parameters_test
+      id: parameters_test
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: parameters_test
+        setup-command: sudo -H pip3 install pytest
+        command: pytest parameters_test.py
+        timeout: 10
+        max-score: 1
+    - name: Autograding Reporter
+      uses: classroom-resources/autograding-grading-reporter@v1
+      env:
+        PARAMETERS_TEST_RESULTS: "${{steps.parameters_test.outputs.result}}"
+      with:
+        runners: parameters_test
+
+name: Autograding Tests
+on:
+  - push
+  - workflow_dispatch
+  - repository_dispatch
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: command-substitution_test
+      id: command-substitution_test
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: command-substitution_test
+        setup-command: sudo -H pip3 install pytest
+        command: pytest command-substitution_test.py
+        timeout: 10
+        max-score: 1
+    - name: Autograding Reporter
+      uses: classroom-resources/autograding-grading-reporter@v1
+      env:
+        COMMAND_SUBSTITUTION_TEST_RESULTS: "${{steps.command-substitution_test.outputs.result}}"
+      with:
+        runners: command-substitution_test
+
+name: Autograding Tests
+on:
+  - push
+  - workflow_dispatch
+  - repository_dispatch
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: dog-years_test
+      id: dog-years_test
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: dog-years_test
+        setup-command: sudo -H pip3 install pytest
+        command: pytest dog-years_test.py
+        timeout: 10
+        max-score: 1
+    - name: Autograding Reporter
+      uses: classroom-resources/autograding-grading-reporter@v1
+      env:
+        DOG_YEARS_TEST_RESULTS: "${{steps.dog-years_test.outputs.result}}"
+      with:
+        runners: dog-years_test
+
+name: Autograding Tests
+on:
+  - push
+  - workflow_dispatch
+  - repository_dispatch
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: if-1_test
+      id: if-1_test
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: if-1_test
+        setup-command: sudo -H pip3 install pytest
+        command: pytest if-1_test.py
+        timeout: 10
+        max-score: 1
+    - name: Autograding Reporter
+      uses: classroom-resources/autograding-grading-reporter@v1
+      env:
+        IF_1_TEST_RESULTS: "${{steps.if-1_test.outputs.result}}"
+      with:
+        runners: if-1_test
+
+name: Autograding Tests
+on:
+  - push
+  - workflow_dispatch
+  - repository_dispatch
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: if-2_test
+      id: if-2_test
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: if-2_test
+        setup-command: sudo -H pip3 install pytest
+        command: pytest if-2_test.py
+        timeout: 10
+        max-score: 1
+    - name: Autograding Reporter
+      uses: classroom-resources/autograding-grading-reporter@v1
+      env:
+        IF_2_TEST_RESULTS: "${{steps.if-2_test.outputs.result}}"
+      with:
+        runners: if-2_test
+
+name: Autograding Tests
+on:
+  - push
+  - workflow_dispatch
+  - repository_dispatch
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: if-3_test
+      id: if-3_test
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: if-3_test
+        setup-command: sudo -H pip3 install pytest
+        command: pytest if-3_test.py
+        timeout: 10
+        max-score: 1
+    - name: Autograding Reporter
+      uses: classroom-resources/autograding-grading-reporter@v1
+      env:
+        IF_3_TEST_RESULTS: "${{steps.if-3_test.outputs.result}}"
+      with:
+        runners: if-3_test
+
+name: Autograding Tests
+on:
+  - push
+  - workflow_dispatch
+  - repository_dispatch
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: for-1_test
+      id: for-1_test
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: for-1_test
+        setup-command: sudo -H pip3 install pytest
+        command: pytest for-1_test.py
+        timeout: 10
+        max-score: 1
+    - name: Autograding Reporter
+      uses: classroom-resources/autograding-grading-reporter@v1
+      env:
+        FOR_1_TEST_RESULTS: "${{steps.for-1_test.outputs.result}}"
+      with:
+        runners: for-1_test
+
+name: Autograding Tests
+on:
+  - push
+  - workflow_dispatch
+  - repository_dispatch
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: for-2_test
+      id: for-2_test
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: for-2_test
+        setup-command: sudo -H pip3 install pytest
+        command: pytest for-2_test.py
+        timeout: 10
+        max-score: 1
+    - name: Autograding Reporter
+      uses: classroom-resources/autograding-grading-reporter@v1
+      env:
+        FOR_2_TEST_RESULTS: "${{steps.for-2_test.outputs.result}}"
+      with:
+        runners: for-2_test
